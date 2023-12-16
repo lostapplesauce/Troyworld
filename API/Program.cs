@@ -13,6 +13,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(opt => {
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddCors(opt => {
+    opt.AddPolicy("CorsPolicy", policy => {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:3001");
+    });
+});
 
 var app = builder.Build();
 
@@ -24,6 +29,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//string has to match name within AddCors method
+app.UseCors("CorsPolicy");
 //This won't do anything til i create login
 app.UseAuthorization();
 
