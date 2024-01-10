@@ -9,21 +9,24 @@ namespace Persistence
 
             var activities = new List<Activity>{
                 new Activity{
-                    Title = "Travel 1",
+                    Title = "Past Travel 1",
                     Date = DateTime.UtcNow.AddMonths(-5),
                     Description = "Travels 5 months ago",
+                    Category = "travel",
                     Location = "Ireland"
                 },
                 new Activity{
-                    Title = "Travel 2",
+                    Title = "Past Travel 2",
                     Date = DateTime.UtcNow.AddMonths(-13),
                     Description = "Travels 13 months ago",
+                    Category = "travel",
                     Location = "Portugal"
                 },
                 new Activity{
                     Title = "Furture Travel 1",
                     Date = DateTime.UtcNow.AddMonths(+5),
                     Description = "Travels 5 months away",
+                    Category = "travel",
                     Location = "Thailand"
                 }
             };

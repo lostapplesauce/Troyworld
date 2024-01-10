@@ -22,6 +22,7 @@ if (app.Environment.IsDevelopment())
 }
 
 //string has to match name within AddCors method
+//CorsPolicy within ApplicationServiceExtensions
 app.UseCors("CorsPolicy");
 //This won't do anything til i create login
 app.UseAuthorization();
