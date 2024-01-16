@@ -23,7 +23,7 @@ namespace Persistence
                     Location = "Portugal"
                 },
                 new Activity{
-                    Title = "Furture Travel 1",
+                    Title = "Furture Travel 11",
                     Date = DateTime.UtcNow.AddMonths(+5),
                     Description = "Travels 5 months away",
                     Category = "travel",
