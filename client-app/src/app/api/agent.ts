@@ -30,7 +30,7 @@ const request = {
 
 const Activities ={
     list: () => request.get<Activity[]>('/activities'),
-    details: (id: string) => request.get<Activity>(`/activity/${id}`),
+    details: (id: string) => request.get<Activity>(`/activities/${id}`),
     create: (activity: Activity) => request.post<void>(`/activities`, activity),
     update: (activity: Activity) => axios.put<void>(`/activities/${activity.id}`, activity),
     delete: (id: string) => axios.delete<void>(`/activities/${id}`)
